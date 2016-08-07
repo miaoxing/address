@@ -1,0 +1,40 @@
+/* 地址选择器 */
+.address-picker {
+  min-height: 68px;
+  margin-bottom: 10px;
+}
+
+.address-picker ul {
+  margin-bottom: 0;
+}
+
+/* 地址列表 */
+.address-list {
+  margin-bottom: 44px;
+  border-top: 0; /* 和modal-header的头部的边框不重叠 */
+  background: #fff;
+}
+
+.address-modal-body {
+  max-height: 320px;
+}
+
+/* 选择器中的地址列表 */
+.address-modal-body .address-list {
+  margin-bottom: 0;
+}
+
+.address-select {
+  padding-left: 25px;
+}
+
+.address-selected-icon {
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+
+.address-list-action {
+  width: 60px;
+}

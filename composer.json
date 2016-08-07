@@ -1,0 +1,14 @@
+{
+  "name": "miaoxing/address",
+  "keywords": [
+    "address"
+  ],
+  "license": "MIT",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "plugins\\address\\": ""
+    }
+  }
+}
