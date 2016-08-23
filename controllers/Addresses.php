@@ -41,24 +41,13 @@ class Addresses extends \miaoxing\plugin\BaseController
     {
         $address = wei()->address();
 
+        $address->fromArray(wei()->lbs->getIpInfo());
+
         wei()->event->trigger('editAddress', [$address]);
 
         return $this->suc([
             'data' => $address->toArray()
         ]);
-    }
-
-    public function editAction($req)
-    {
-        $address = wei()->address()->mine()->findId($req['id']);
-
-        if ($address->isNew()) {
-            $address->fromArray(wei()->lbs->getIpInfo());
-        }
-
-        wei()->event->trigger('editAddress', [$address]);
-
-        return get_defined_vars();
     }
 
     public function createAction($req)
