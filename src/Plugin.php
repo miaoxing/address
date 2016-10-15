@@ -1,8 +1,10 @@
 <?php
 
-namespace miaoxing\address;
+namespace Miaoxing\Address;
 
-class Plugin extends \miaoxing\plugin\BasePlugin
+use miaoxing\plugin\BasePlugin;
+
+class Plugin extends BasePlugin
 {
     protected $name = '用户地址';
 

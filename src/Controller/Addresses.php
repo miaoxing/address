@@ -1,6 +1,6 @@
 <?php
 
-namespace miaoxing\address\controllers;
+namespace Miaoxing\Address\Controller;
 
 use miaoxing\plugin\middleware\CheckRedirectUrl;
 
