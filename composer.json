@@ -11,5 +11,10 @@
     "psr-4": {
       "Miaoxing\\Address": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Address": "tests"
+    }
   }
 }
