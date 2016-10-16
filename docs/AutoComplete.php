@@ -2,8 +2,8 @@
 
 namespace miaoxing\address\docs {
     /**
-     * @property    \miaoxing\address\services\Address $address 用户地址
-     * @method      \miaoxing\address\services\Address|\miaoxing\address\services\Address[] address()
+     * @property    \Miaoxing\Address\Service\Address $address 用户地址
+     * @method      \Miaoxing\Address\Service\Address|\Miaoxing\Address\Service\Address[] address()
      *
      */
     class AutoComplete

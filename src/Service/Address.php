@@ -1,6 +1,6 @@
 <?php
 
-namespace miaoxing\address\services;
+namespace Miaoxing\Address\Service;
 
 use miaoxing\plugin\BaseModel;
 
