@@ -1,19 +1,19 @@
 <?php $view->layout() ?>
 
 <?= $block('css') ?>
-<link rel="stylesheet" href="<?= $asset('@address/assets/addresses.css') ?>">
+<link rel="stylesheet" href="<?= $asset('@address/css/addresses.css') ?>">
 <?= $block->end() ?>
 
 <div class="js-address-container">
 
 </div>
 
-<?php require $view->getFile('address:addresses/picker.php') ?>
+<?php require $view->getFile('@address/addresses/picker.php') ?>
 
 <?= $block('js') ?>
 <script>
   require([
-    'vendor/miaoxing/address/assets/addresses',
+    'vendor/miaoxing/address/public/js/addresses',
     'comps/artTemplate/template.min',
     'comps/jquery.loadJSON/index.min',
     'jquery-form'
