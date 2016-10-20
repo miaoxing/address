@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Address\Controller;
 
-use miaoxing\plugin\middleware\CheckRedirectUrl;
+use Miaoxing\Plugin\Middleware\CheckRedirectUrl;
 
 class Addresses extends \miaoxing\plugin\BaseController
 {
