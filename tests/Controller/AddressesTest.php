@@ -2,7 +2,7 @@
 
 namespace MiaoxingTest\Address\Controller;
 
-use miaoxing\plugin\tests\BaseControllerTestCase;
+use MiaoxingTest\Plugin\BaseControllerTestCase;
 
 class AddressesTest extends BaseControllerTestCase
 {
