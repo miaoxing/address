@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <?= $block('css') ?>
-<link rel="stylesheet" href="<?= $asset('@address/css/addresses.css') ?>">
+<link rel="stylesheet" href="<?= $asset('plugins/address/css/addresses.css') ?>">
 <?= $block->end() ?>
 
 <div class="js-address-container">
