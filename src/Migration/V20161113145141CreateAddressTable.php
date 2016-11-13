@@ -18,7 +18,7 @@ class V20161113145141CreateAddressTable extends BaseMigration
             ->string('name', 32)->comment('姓名')
             ->string('contact', 32)->comment('联系方式')
             ->string('province', 32)->comment('省份')
-            ->string('city', 32) ->comment('城市')
+            ->string('city', 32)->comment('城市')
             ->string('area', 32)->comment('县或区的名称')
             ->string('street', 32)->comment('街道')
             ->string('address', 255)->comment('地址')
