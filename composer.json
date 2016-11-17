@@ -1,11 +1,13 @@
 {
   "name": "miaoxing/address",
+  "description": "Miaoxing Address Plugin",
   "keywords": [
     "miaoxing", "address"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "@dev"
+    "miaoxing/app": "dev-master@dev",
+    "miaoxing/region": "dev-master@dev"
   },
   "autoload": {
     "psr-4": {
