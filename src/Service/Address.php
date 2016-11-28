@@ -31,11 +31,20 @@ class Address extends BaseModel
      */
     public function getDefaultAddress($userId)
     {
-        $default = wei()->db($this->table)->where('userId=?', $userId)->andWhere('enable=?', 1)->andWhere('defaultAddress=?', 1)->fetch();
+        $default = wei()->db($this->table)
+            ->where('userId=?', $userId)
+            ->andWhere('enable=?', 1)
+            ->andWhere('defaultAddress=?', 1)
+            ->fetch();
         if ($default) {
             return $default;
         }
-        $list = wei()->db($this->table)->where('userId=?', $userId)->andWhere('enable=?', 1)->orderBy('id', 'asc')->fetchAll();
+
+        $list = wei()->db($this->table)
+            ->where('userId=?', $userId)
+            ->andWhere('enable=?', 1)
+            ->orderBy('id', 'asc')
+            ->fetchAll();
         if ($list) {
             return $list[0];
         }

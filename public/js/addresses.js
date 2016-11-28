@@ -1,6 +1,6 @@
-define(['comps/jquery-cascading/jquery-cascading'], function () {
+define(['comps/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascading'], function (template) {
   var Addresses = function () {
-
+    // do nothing.
   };
 
   $.extend(Addresses.prototype, {
@@ -20,7 +20,7 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
    * 下单时的地址选择器
    */
   var AddressPicker = function () {
-
+    // do nothing.
   };
 
   $.extend(AddressPicker.prototype, {
@@ -89,9 +89,9 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
       }));
 
       // 点击元素,弹出列表供选择
-      var self = this;
+      var that = this;
       this.$el.click(function () {
-        self.showList();
+        that.showList();
       });
     },
 
@@ -99,7 +99,7 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
      * 加载列表数据
      */
     loadList: function () {
-      var self = this;
+      var that = this;
       var tpl = this.picker ? 'addressPickerModalTpl' : 'addressListMangerTpl';
 
       $.ajax({
@@ -112,19 +112,19 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
           return;
         }
 
-        self.addresses = ret.data;
-        self.$list = $(template.render(tpl, {
+        that.addresses = ret.data;
+        that.$list = $(template.render(tpl, {
           data: ret.data,
-          selectedId: self.data.id
+          selectedId: that.data.id
         }));
-        $(document).trigger('address:renderList', [self]);
-        self.$list.appendTo('body');
-        self.showList();
-        self.bindEvents();
+        $(document).trigger('address:renderList', [that]);
+        that.$list.appendTo('body');
+        that.showList();
+        that.bindEvents();
 
         // 如果是选择器模式,且没有记录,自动弹出新增地址表单
-        if (self.picker && ret.data.length == 0) {
-          self.showNewForm();
+        if (that.picker && ret.data.length === 0) {
+          that.showNewForm();
         }
       });
     },
@@ -179,7 +179,7 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
      * 绑定列表的事件
      */
     bindListEvents: function () {
-      var self = this;
+      var that = this;
 
       // 新增地址
       this.$list.on('click', '.js-address-new', $.proxy(this.showNewForm, this));
@@ -187,9 +187,9 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
       // 编辑地址
       this.$list.on('click', '.js-address-edit', function () {
         var id = $(this).closest('.js-address-item').data('id');
-        var address = self.addresses[id];
-        self.hideList();
-        self.showForm(address);
+        var address = that.addresses[id];
+        that.hideList();
+        that.showForm(address);
       });
     },
 
@@ -197,11 +197,11 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
      * 绑定选择器的事件
      */
     bindPickerEvents: function () {
-      var self = this;
+      var that = this;
 
       // 选择地址,更新到目标位置
       this.$list.on('click', '.js-address-select', function () {
-        self.select(this);
+        that.select(this);
       });
     },
 
@@ -227,14 +227,14 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
      */
     showNewForm: function () {
       // 读取默认资料
-      var self = this;
+      var that = this;
       $.ajax({
         url: $.url('addresses/new.json'),
         loading: true,
         dataType: 'json',
         success: function (ret) {
-          self.hideList();
-          self.showForm(ret.code === 1 ? ret.data : null);
+          that.hideList();
+          that.showForm(ret.code === 1 ? ret.data : null);
         }
       });
     },
@@ -255,7 +255,7 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
       if (address) {
         $form.loadJSON(address);
         // TODO #989
-        if (address.defaultAddress != '1') {
+        if (address.defaultAddress !== '1') {
           $form.find('.js-address-default').prop('checked', false);
         }
       }
@@ -300,14 +300,14 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
         $form.find('.js-area-id').val($(this).find(':selected').data('value'));
       });
 
-      var self = this;
+      var that = this;
       $form.ajaxForm({
         url: $.url('addresses/update'),
         dataType: 'json',
         success: function (ret) {
           $.msg(ret, function () {
             if (ret.code === 1) {
-              self.hideFormAndReloadList();
+              that.hideFormAndReloadList();
             }
           });
         }
@@ -315,11 +315,11 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
 
       // 隐藏表单并显示列表
       $form.on('hidden.bs.modal', function () {
-        if (self.reload) {
-          self.reload = false;
-          self.reloadList();
+        if (that.reload) {
+          that.reload = false;
+          that.reloadList();
         } else {
-          self.showList();
+          that.showList();
         }
       });
 
@@ -337,7 +337,7 @@ define(['comps/jquery-cascading/jquery-cascading'], function () {
             success: function (ret) {
               $.msg(ret, function () {
                 if (ret.code === 1) {
-                  self.hideFormAndReloadList();
+                  that.hideFormAndReloadList();
                 }
               });
             }

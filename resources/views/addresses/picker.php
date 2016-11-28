@@ -9,7 +9,8 @@
           </h4>
           <% } else { %>
           <h4 class="list-heading">
-            <?= $setting('order.titleReceive') ?: '收货' ?>人: <%= address.name %> <span class="pull-right"><%= address.contact %></span>
+            <?= $setting('order.titleReceive') ?: '收货' ?>人: <%= address.name %>
+            <span class="pull-right"><%= address.contact %></span>
           </h4>
           <div class="list-body">
             <%= address.province + address.city + address.area + address.street + address.address %>
@@ -28,7 +29,9 @@
     <% $.each(data, function(i, address) { %>
     <li class="js-address-item list-item" data-id="<%= i %>">
       <div class="js-address-select address-select list-col">
-        <i class="js-address-selected-icon address-selected-icon <%= selectedId == address.id ? 'bm-ok' : '' %> text-primary"></i>
+        <i class="js-address-selected-icon address-selected-icon
+          <%= selectedId == address.id ? 'bm-ok' : '' %> text-primary">
+        </i>
         <h4 class="list-heading">
           <%= address.name %> <%= address.contact %>
         </h4>
@@ -61,11 +64,14 @@
 </script>
 
 <script type="text/html" id="addressPickerModalTpl">
-  <div class="modal-bottom modal fade" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel" aria-hidden="true">
+  <div class="modal-bottom modal fade" tabindex="-1" role="dialog" aria-labelledby="addressModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header border-bottom">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <div class="modal-title text-center" id="addressModalLabel">
             请选择地址
           </div>
@@ -99,7 +105,7 @@
 
               <div class="col-control">
                 <input type="text" class="form-control" id="name" name="name"
-                       placeholder="请输入<?= $setting('order.titleReceive') ?: '收货' ?>人姓名">
+                  placeholder="请输入<?= $setting('order.titleReceive') ?: '收货' ?>人姓名">
               </div>
             </div>
 
@@ -108,7 +114,7 @@
 
               <div class="col-control">
                 <input type="tel" class="form-control" id="contact" name="contact"
-                       placeholder="请输入<?= $setting('order.titleReceive') ?: '收货' ?>人手机号码">
+                  placeholder="请输入<?= $setting('order.titleReceive') ?: '收货' ?>人手机号码">
               </div>
             </div>
 
@@ -117,7 +123,7 @@
 
               <div class="col-control">
                 <input type="text" class="form-control" id="idCard" name="idCard" placeholder="请输入收货人身份证"
-                       value="">
+                  value="">
               </div>
             </div>
 
@@ -135,7 +141,8 @@
               <div class="col-control">
                 <div class="checkbox checkbox-circle checkbox-success checkbox-sm">
                   <label>
-                    <input class="js-address-default" id="defaultAddress" type="checkbox" name="defaultAddress" value="1">
+                    <input class="js-address-default" id="defaultAddress" type="checkbox" name="defaultAddress"
+                      value="1">
                     <span class="checkbox-label">设为默认</span>
                   </label>
                 </div>
@@ -149,7 +156,9 @@
             <input type="hidden" name="zipcode" id="zipcode">
             <button type="submit" class="btn btn-primary btn-fluid flex-grow-1">保存</button>
             <% if (address.id) { %>
-            <button type="button" class="js-address-destroy btn btn-danger btn-fluid flex-grow-1" data-id="<%= address.id %>">删除</button>
+            <button type="button" class="js-address-destroy btn btn-danger btn-fluid flex-grow-1"
+              data-id="<%= address.id %>">删除
+            </button>
             <% } %>
           </div>
         </form>

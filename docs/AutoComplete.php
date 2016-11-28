@@ -1,6 +1,7 @@
 <?php
 
 namespace miaoxing\address\docs {
+
     /**
      * @property    \Miaoxing\Address\Service\Address $address 用户地址
      * @method      \Miaoxing\Address\Service\Address|\Miaoxing\Address\Service\Address[] address()
@@ -12,6 +13,7 @@ namespace miaoxing\address\docs {
 }
 
 namespace {
+
     /**
      * @return \miaoxing\address\docs\AutoComplete
      */
