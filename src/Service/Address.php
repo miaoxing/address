@@ -20,6 +20,7 @@ class Address extends BaseModel
         if ($address['userId'] != wei()->curUser['id']) {
             $address = null;
         }
+
         return $address;
     }
 
@@ -48,7 +49,8 @@ class Address extends BaseModel
         if ($list) {
             return $list[0];
         }
-        return array();
+
+        return [];
     }
 
     /**
