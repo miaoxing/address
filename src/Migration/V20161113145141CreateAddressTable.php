@@ -11,7 +11,7 @@ class V20161113145141CreateAddressTable extends BaseMigration
      */
     public function up()
     {
-        $this->scheme->table('address')
+        $this->schema->table('address')
             ->id()
             ->int('userId')
             ->int('areaId')->comment('对应区域的编号,如深圳是440300')
@@ -37,6 +37,6 @@ class V20161113145141CreateAddressTable extends BaseMigration
      */
     public function down()
     {
-        $this->scheme->dropIfExists('address');
+        $this->schema->dropIfExists('address');
     }
 }
