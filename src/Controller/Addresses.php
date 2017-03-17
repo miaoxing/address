@@ -8,13 +8,6 @@ class Addresses extends \miaoxing\plugin\BaseController
 {
     const SOURCE_WECHAT = 2;
 
-    public function __construct(array $options)
-    {
-        parent::__construct($options);
-
-        $this->middleware(CheckRedirectUrl::className(), ['only' => 'select']);
-    }
-
     public function indexAction($req)
     {
         $addresses = wei()->address()
