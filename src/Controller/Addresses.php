@@ -2,8 +2,6 @@
 
 namespace Miaoxing\Address\Controller;
 
-use Miaoxing\Plugin\Middleware\CheckRedirectUrl;
-
 class Addresses extends \miaoxing\plugin\BaseController
 {
     const SOURCE_WECHAT = 2;
@@ -26,6 +24,7 @@ class Addresses extends \miaoxing\plugin\BaseController
             default:
                 $headerTitle = '收货地址';
                 $this->pageConfig['displayFooter'] = false;
+
                 return get_defined_vars();
         }
     }
@@ -39,7 +38,7 @@ class Addresses extends \miaoxing\plugin\BaseController
         wei()->event->trigger('editAddress', [$address]);
 
         return $this->suc([
-            'data' => $address->toArray()
+            'data' => $address->toArray(),
         ]);
     }
 
@@ -57,11 +56,11 @@ class Addresses extends \miaoxing\plugin\BaseController
 
                 ],
                 'contact' => [
-                    'mobileCn' => true
+                    'mobileCn' => true,
                 ],
                 'idCard' => [
                     'required' => false,
-                    'idCardCn' => true
+                    'idCardCn' => true,
                 ],
                 'province' => [
 
@@ -74,7 +73,7 @@ class Addresses extends \miaoxing\plugin\BaseController
                 ],
                 'address' => [
 
-                ]
+                ],
             ],
             'messages' => [
                 'idCard' => [
@@ -88,14 +87,14 @@ class Addresses extends \miaoxing\plugin\BaseController
                 'province' => '省份',
                 'city' => '城市',
                 'area' => '区域',
-                'address' => '详细地址'
-            ]
+                'address' => '详细地址',
+            ],
         ]);
         if (!$validator->isValid()) {
             return $this->err($validator->getFirstMessage());
         }
 
-        $address = wei()->address()->findId($req['id'], $req);
+        $address = wei()->address()->mine()->findId($req['id'], $req);
 
         // 触发保存前回调
         $ret = wei()->event->until('preAddressSave', [$address]);
@@ -110,13 +109,13 @@ class Addresses extends \miaoxing\plugin\BaseController
 
         $address->save([
             'userId' => $this->curUser['id'],
-            'enable' => true
+            'enable' => true,
         ]);
 
         return $this->suc([
             'message' => '保存成功',
             'id' => $address['id'],
-            'data' => $address->toArray()
+            'data' => $address->toArray(),
         ]);
     }
 
@@ -124,8 +123,9 @@ class Addresses extends \miaoxing\plugin\BaseController
     {
         $address = wei()->address()->mine()->findOneById($req['id']);
         $address->save([
-            'enable' => 0
+            'enable' => 0,
         ]);
+
         return $this->suc('删除成功');
     }
 }
