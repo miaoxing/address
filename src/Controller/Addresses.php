@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Address\Controller;
 
-class Addresses extends \miaoxing\plugin\BaseController
+class Addresses extends \Miaoxing\Plugin\BaseController
 {
     const SOURCE_WECHAT = 2;
 
