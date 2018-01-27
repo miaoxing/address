@@ -1,6 +1,6 @@
 <?php $view->layout() ?>
 
-<?= $block('css') ?>
+<?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset('plugins/address/css/addresses.css') ?>">
 <?= $block->end() ?>
 
@@ -10,7 +10,7 @@
 
 <?php require $view->getFile('@address/addresses/picker.php') ?>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require([
     'vendor/miaoxing/address/public/js/addresses',
