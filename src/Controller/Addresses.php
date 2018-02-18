@@ -23,7 +23,7 @@ class Addresses extends \Miaoxing\Plugin\BaseController
 
             default:
                 $headerTitle = '收货地址';
-                $this->layout->hideFooter();
+                $this->page->hideFooter();
 
                 return get_defined_vars();
         }
