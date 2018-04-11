@@ -101,7 +101,10 @@
           </div>
           <div class="modal-body modal-body-fluid">
             <div class="js-form-group-name form-group">
-              <label for="name" class="control-label">姓名</label>
+              <label for="name" class="control-label">
+                姓名
+                <span class="text-warning">*</span>
+              </label>
 
               <div class="col-control">
                 <input type="text" class="form-control" id="name" name="name"
@@ -110,7 +113,10 @@
             </div>
 
             <div class="js-form-group-contact form-group">
-              <label for="contact" class="control-label">手机</label>
+              <label for="contact" class="control-label">
+                手机
+                <span class="text-warning">*</span>
+              </label>
 
               <div class="col-control">
                 <input type="tel" class="form-control" id="contact" name="contact"
@@ -119,7 +125,10 @@
             </div>
 
             <div class="js-form-group-id-card form-group hide">
-              <label for="idCard" class="control-label">身份证</label>
+              <label for="idCard" class="control-label">
+                身份证
+                <span class="text-warning">*</span>
+              </label>
 
               <div class="col-control">
                 <input type="text" class="form-control" id="idCard" name="idCard" placeholder="请输入收货人身份证"
@@ -130,7 +139,10 @@
             <?php require $view->getFile('address:addresses/edit-area.php') ?>
 
             <div class="js-form-group-address form-group">
-              <label for="address" class="control-label">详细地址</label>
+              <label for="address" class="control-label">
+                详细地址
+                <span class="text-warning">*</span>
+              </label>
 
               <div class="col-control">
                 <textarea class="form-control" id="address" name="address" rows="2" placeholder="请输入详细地址"></textarea>
