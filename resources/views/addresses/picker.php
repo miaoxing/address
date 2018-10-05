@@ -136,7 +136,7 @@
               </div>
             </div>
 
-            <?php require $view->getFile('address:addresses/edit-area.php') ?>
+            <?php require $view->getFile('@address/addresses/edit-area.php') ?>
 
             <div class="js-form-group-address form-group">
               <label for="address" class="control-label">
