@@ -211,11 +211,18 @@ define(['comps/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascadi
     select: function (el) {
       var $select = $(el);
       var $item = $select.closest('.js-address-item');
+      var data = this.addresses[$item.data('id')];
+
+      var event = $.Event('address:beforeSelect');
+      $(document).trigger(event, [this, data]);
+      if (event.preventDefault) {
+        return;
+      }
 
       $select.closest('.js-address-list').find('.js-address-selected-icon').removeClass('bm-ok');
       $item.find('.js-address-selected-icon').addClass('bm-ok');
 
-      this.data = this.addresses[$item.data('id')];
+      this.data = data;
       this.renderPicker();
       this.hideList();
 
