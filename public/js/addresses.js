@@ -215,7 +215,7 @@ define(['comps/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascadi
 
       var event = $.Event('address:beforeSelect');
       $(document).trigger(event, [this, data]);
-      if (event.preventDefault) {
+      if (event.isDefaultPrevented()) {
         return;
       }
 
