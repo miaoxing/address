@@ -13,7 +13,7 @@
 <?= $block->js() ?>
 <script>
   require([
-    'vendor/miaoxing/address/public/js/addresses',
+    'plugins/address/js/addresses',
     'comps/artTemplate/template.min',
     'comps/jquery.loadJSON/index.min',
     'jquery-form'
