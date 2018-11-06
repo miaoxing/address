@@ -123,7 +123,7 @@ define(['comps/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascadi
         that.bindEvents();
 
         // 如果是选择器模式,且没有记录,自动弹出新增地址表单
-        if (that.picker && ret.data.length === 0) {
+        if (that.picker && ret.data.length === 0 && !$('.js-address-new').siblings().length) {
           that.showNewForm();
         }
       });
