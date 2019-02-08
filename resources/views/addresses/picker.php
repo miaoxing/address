@@ -69,12 +69,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header border-bottom">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
           <div class="modal-title text-center" id="addressModalLabel">
             请选择地址
           </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="address-modal-body modal-body modal-body-fluid">
           <% include('addressListTpl') %>
@@ -93,11 +93,11 @@
       <div class="modal-content">
         <form class="js-address-form form" method="post">
           <div class="modal-header border-bottom">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
             <div class="modal-title text-center">
               地址管理
             </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body modal-body-fluid">
             <div class="js-form-group-name form-group">
