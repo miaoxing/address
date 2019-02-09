@@ -68,7 +68,7 @@
     aria-labelledby="addressModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header border-bottom">
+        <div class="modal-header">
           <div class="modal-title text-center" id="addressModalLabel">
             请选择地址
           </div>
@@ -92,7 +92,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <form class="js-address-form form" method="post">
-          <div class="modal-header border-bottom">
+          <div class="modal-header">
             <div class="modal-title text-center">
               地址管理
             </div>
