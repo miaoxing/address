@@ -96,8 +96,9 @@
             <div class="modal-title text-center">
               地址管理
             </div>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body modal-body-fluid">
             <div class="js-form-group-name form-group">
