@@ -27,20 +27,22 @@
     省市区
   </label>
 
-  <div class="col-lg-8 p-l-0">
-    <div class="col-lg-4 p-r-0">
-      <select class="js-cascading-item js-province province form-control" id="receiver-province" name="receiverProvince">
-      </select>
-    </div>
+  <div class="col-lg-8">
+    <div class="form-row">
+      <div class="col">
+        <select class="js-cascading-item js-province province form-control" id="receiver-province" name="receiverProvince">
+        </select>
+      </div>
 
-    <div class="col-lg-4 p-r-0">
-      <select class="js-cascading-item js-city city form-control" id="receiver-city" name="receiverCity">
-      </select>
-    </div>
+      <div class="col">
+        <select class="js-cascading-item js-city city form-control" id="receiver-city" name="receiverCity">
+        </select>
+      </div>
 
-    <div class="col-lg-4 p-r-0">
-      <select class="js-cascading-item js-area area form-control" id="receiver-area" name="receiverArea">
-      </select>
+      <div class="col">
+        <select class="js-cascading-item js-area area form-control" id="receiver-area" name="receiverArea">
+        </select>
+      </div>
     </div>
   </div>
 </div>
