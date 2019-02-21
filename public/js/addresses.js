@@ -1,4 +1,4 @@
-define(['comps/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascading'], function (template) {
+define(['plugins/app/libs/artTemplate/template.min', 'comps/jquery-cascading/jquery-cascading'], function (template) {
   var Addresses = function () {
     // do nothing.
   };

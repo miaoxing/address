@@ -14,7 +14,7 @@
 <script>
   require([
     'plugins/address/js/addresses',
-    'comps/artTemplate/template.min',
+    'plugins/app/libs/artTemplate/template.min',
     'comps/jquery.loadJSON/index.min',
     'jquery-form'
   ], function (address) {
