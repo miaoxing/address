@@ -16,7 +16,7 @@
     'plugins/address/js/addresses',
     'plugins/app/libs/artTemplate/template.min',
     'comps/jquery.loadJSON/index.min',
-    'jquery-form'
+    'plugins/app/libs/jquery-form/jquery.form'
   ], function (address) {
     address.indexAction({
       $el: $('.js-address-container')
