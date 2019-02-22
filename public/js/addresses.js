@@ -71,7 +71,6 @@ define(['plugins/app/libs/artTemplate/template.min', 'comps/jquery-cascading/jqu
     render: function (options) {
       $.extend(this, options);
 
-      template.helper('$', $);
 
       if (this.picker) {
         this.renderPicker();
