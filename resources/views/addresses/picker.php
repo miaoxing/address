@@ -10,7 +10,7 @@
           <% } else { %>
           <h4 class="list-heading">
             <?= $setting('order.titleReceive') ?: '收货' ?>人: <%= address.name %>
-            <span class="pull-right"><%= address.contact %></span>
+            <span class="float-right"><%= address.contact %></span>
           </h4>
           <div class="list-body">
             <%= address.province + address.city + address.area + address.street + address.address %>
