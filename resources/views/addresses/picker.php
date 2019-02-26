@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="list-col list-middle address-list-action">
-        <a class="js-address-edit btn btn-sm btn-default" href="javascript:;">编辑</a>
+        <a class="js-address-edit btn btn-sm btn-secondary" href="javascript:;">编辑</a>
       </div>
     </li>
     <% })%>
