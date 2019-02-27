@@ -1,5 +1,5 @@
 <script type="text/html" id="addressPickerTpl">
-  <ul class="list list-link">
+  <ul class="list">
     <li>
       <a class="list-item has-feedback" href="javascript:;">
         <div class="list-col">
@@ -25,7 +25,7 @@
 </script>
 
 <script type="text/html" class="js-address-list-tpl" id="addressListTpl">
-  <ul class="js-address-list address-list list list-link">
+  <ul class="js-address-list address-list list">
     <% $.each(data, function(i, address) { %>
     <li class="js-address-item list-item" data-id="<%= i %>">
       <div class="js-address-select address-select list-col">
