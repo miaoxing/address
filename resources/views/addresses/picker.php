@@ -1,7 +1,7 @@
 <script type="text/html" id="addressPickerTpl">
   <ul class="list">
     <li>
-      <a class="list-item has-feedback" href="javascript:;">
+      <a class="list-item list-has-feedback" href="javascript:;">
         <div class="list-col">
           <% if (!address.id) { %>
           <h4 class="list-title address-empty">
