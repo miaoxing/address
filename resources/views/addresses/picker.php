@@ -4,15 +4,15 @@
       <a class="list-item has-feedback" href="javascript:;">
         <div class="list-col">
           <% if (!address.id) { %>
-          <h4 class="list-item-title address-empty">
+          <h4 class="list-title address-empty">
             请先添加<?= $setting('order.titleReceive') ?: '收货' ?>地址
           </h4>
           <% } else { %>
-          <h4 class="list-item-title">
+          <h4 class="list-title">
             <?= $setting('order.titleReceive') ?: '收货' ?>人: <%= address.name %>
             <span class="float-right"><%= address.contact %></span>
           </h4>
-          <div class="list-item-text">
+          <div class="list-text">
             <%= address.province + address.city + address.area + address.street + address.address %>
           </div>
           <% } %>
@@ -32,10 +32,10 @@
         <i class="js-address-selected-icon address-selected-icon
           <%= selectedId == address.id ? 'bm-ok' : '' %> text-primary">
         </i>
-        <h4 class="list-item-title">
+        <h4 class="list-title">
           <%= address.name %> <%= address.contact %>
         </h4>
-        <div class="list-item-text">
+        <div class="list-text">
           <%= address.province + address.city + address.area + address.street + address.address %>
         </div>
       </div>
