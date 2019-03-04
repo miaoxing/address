@@ -1,7 +1,7 @@
 <script type="text/html" id="addressPickerTpl">
   <ul class="list">
     <li>
-      <a class="list-item list-has-feedback" href="javascript:;">
+      <a class="list-item list-has-arrow" href="javascript:;">
         <div class="list-col">
           <% if (!address.id) { %>
           <h4 class="list-title address-empty">
@@ -18,7 +18,7 @@
           <% } %>
           <input type="hidden" class="js-address-id" id="addressId" name="addressId" value="<%= address.id %>">
         </div>
-        <i class="bm-angle-right list-feedback"></i>
+        <i class="bm-angle-right list-arrow"></i>
       </a>
     </li>
   </ul>
