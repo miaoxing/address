@@ -28,7 +28,7 @@
   <ul class="js-address-list address-list list">
     <% $.each(data, function(i, address) { %>
     <li class="js-address-item list-item" data-id="<%= i %>">
-      <div class="js-address-select address-select list-col">
+      <div class="list-col js-address-select address-select">
         <i class="js-address-selected-icon address-selected-icon
           <%= selectedId == address.id ? 'bm-ok' : '' %> text-primary">
         </i>
