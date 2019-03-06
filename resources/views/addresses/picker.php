@@ -152,12 +152,10 @@
 
             <div class="js-form-group-default form-group">
               <div class="col-control">
-                <div class="checkbox checkbox-circle checkbox-success checkbox-sm">
-                  <label>
-                    <input class="js-address-default" id="defaultAddress" type="checkbox" name="defaultAddress"
-                      value="1">
-                    <span class="checkbox-label">设为默认</span>
-                  </label>
+                <div class="custom-control custom-checkbox custom-checkbox-success">
+                  <input class="js-address-default custom-control-input" id="defaultAddress" type="checkbox" name="defaultAddress"
+                    value="1">
+                  <label class="custom-control-label" for="defaultAddress">设为默认</label>
                 </div>
               </div>
             </div>
