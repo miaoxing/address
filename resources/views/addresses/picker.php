@@ -58,7 +58,7 @@
 
 <script type="text/html" id="addressListMangerTpl">
   <% include('addressListTpl') %>
-  <div class="footer-bar footer-bar-fluid flex">
+  <div class="footer-bar footer-bar-fluid d-flex">
     <% include('addressActionTpl') %>
   </div>
 </script>
@@ -79,7 +79,7 @@
         <div class="address-modal-body modal-body modal-body-fluid">
           <% include('addressListTpl') %>
         </div>
-        <div class="modal-footer modal-footer-fluid flex">
+        <div class="modal-footer modal-footer-fluid d-flex">
           <% include('addressActionTpl') %>
         </div>
       </div>
@@ -161,7 +161,7 @@
             </div>
 
           </div>
-          <div class="modal-footer modal-footer-fluid flex">
+          <div class="modal-footer modal-footer-fluid d-flex">
             <input type="hidden" name="id" id="id">
             <input type="hidden" class="js-area-id" name="areaId" id="areaId">
             <input type="hidden" name="zipcode" id="zipcode">
