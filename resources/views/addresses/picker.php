@@ -39,7 +39,7 @@
           <%= address.province + address.city + address.area + address.street + address.address %>
         </div>
       </div>
-      <div class="list-col list-middle address-list-action">
+      <div class="list-col align-self-center address-list-action">
         <a class="js-address-edit btn btn-sm btn-secondary" href="javascript:;">编辑</a>
       </div>
     </li>
