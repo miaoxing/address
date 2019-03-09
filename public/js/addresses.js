@@ -332,7 +332,7 @@ define(['plugins/app/libs/artTemplate/template.min', 'comps/jquery-cascading/jqu
       // 点击删除
       $form.find('.js-address-destroy').click(function () {
         var id = $(this).data('id');
-        $.confirm('确认删除', function (result) {
+        $.confirm('确定删除', function (result) {
           if (!result) {
             return;
           }
