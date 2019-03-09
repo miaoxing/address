@@ -37,5 +37,5 @@
 }
 
 .address-list-action {
-  width: 61px;
+  flex: 0 0 61px;
 }
