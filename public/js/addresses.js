@@ -284,7 +284,11 @@ define(['plugins/app/libs/artTemplate/template.min', 'comps/jquery-cascading/jqu
      * 隐藏表单
      */
     hideForm: function () {
-      this.$form.modal('hide');
+      var $form = this.$form;
+      $form.on('hidden.bs.modal', function () {
+        $form.remove();
+      });
+      $form.modal('hide');
     },
 
     /**
