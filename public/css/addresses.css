@@ -1,7 +1,7 @@
 /* 地址选择器 */
 .address-picker {
   min-height: 68px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .address-picker ul {
@@ -10,7 +10,7 @@
 
 /* 地址列表 */
 .address-list {
-  margin-bottom: 44px;
+  margin-bottom: 3rem;
   border-top: 0; /* 和modal-header的头部的边框不重叠 */
   background: #fff;
 }
