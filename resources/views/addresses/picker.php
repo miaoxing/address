@@ -66,7 +66,7 @@
 <script type="text/html" id="addressPickerModalTpl">
   <div class="address-list-modal modal-bottom modal fade" tabindex="-1" role="dialog"
     aria-labelledby="addressModalLabel" aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <div class="modal-title text-center" id="addressModalLabel">
@@ -89,7 +89,7 @@
 
 <script type="text/html" id="addressFormModalTpl">
   <div class="address-form-modal modal-bottom modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <form class="js-address-form form" method="post">
           <div class="modal-header">
