@@ -4,7 +4,7 @@ namespace Miaoxing\Address;
 
 use Miaoxing\Plugin\BasePlugin;
 
-class Plugin extends BasePlugin
+class AddressPlugin extends BasePlugin
 {
     protected $name = '用户地址';
 
