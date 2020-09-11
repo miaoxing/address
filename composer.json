@@ -1,5 +1,6 @@
 {
   "name": "miaoxing/address",
+  "type": "miaoxing-plugin",
   "description": "Miaoxing Address Plugin",
   "keywords": [
     "miaoxing", "address"
@@ -20,5 +21,15 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "miaoxing-plugin"
+    ],
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:miaoxing-plugin"
+      ]
+    }
+  }
 }
