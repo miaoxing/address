@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Address\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20161113145141CreateAddressTable extends BaseMigration
 {
