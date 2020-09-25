@@ -3,11 +3,12 @@
   "type": "miaoxing-plugin",
   "description": "Miaoxing Address Plugin",
   "keywords": [
-    "miaoxing", "address"
+    "miaoxing",
+    "address"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.2.2",
+    "miaoxing/app": "^0.2.3",
     "miaoxing/region": "^0.1.0"
   },
   "autoload": {
