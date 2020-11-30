@@ -27,7 +27,7 @@ class V20161113145141CreateAddressTable extends BaseMigration
             ->bool('defaultAddress')->comment('是否默认地址')
             ->bool('enable')->comment('是否启用')
             ->tinyInt('source', 1)->comment('来源')
-            ->timestampsV1()
+            ->timestamps()
             ->index(['userId', 'enable'])
             ->exec();
     }
