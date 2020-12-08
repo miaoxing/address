@@ -3,9 +3,12 @@
 namespace Miaoxing\Address\Service;
 
 use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\Model\ModelTrait;
 
 class Address extends BaseModel
 {
+    use ModelTrait;
+
     protected $table = 'address';
 
     /**
