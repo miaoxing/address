@@ -1,3 +1,15 @@
+## [0.1.17](https://github.com/miaoxing/address/compare/v0.1.16...v0.1.17) (2022-02-05)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.5.0` to `0.5.1`
+* **@miaoxing/region:** upgrade from `0.2.1` to `0.2.2`
+* **@miaoxing/dev:** upgrade from `8.0.1` to `8.1.0`
+
 ## [0.1.16](https://github.com/miaoxing/address/compare/v0.1.15...v0.1.16) (2022-01-12)
 
 
