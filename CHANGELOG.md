@@ -1,3 +1,24 @@
+# [0.2.0](https://github.com/miaoxing/address/compare/v0.1.18...v0.2.0) (2022-03-04)
+
+
+### Features
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint` ([a73ad57](https://github.com/miaoxing/address/commit/a73ad57152da5885976527e9e62653f3deee5953))
+
+
+### BREAKING CHANGES
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint`
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.6.0` to `0.6.1`
+* **@miaoxing/region:** upgrade from `0.2.3` to `0.2.4`
+
 ## [0.1.18](https://github.com/miaoxing/address/compare/v0.1.17...v0.1.18) (2022-02-28)
 
 
