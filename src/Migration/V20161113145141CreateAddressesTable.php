@@ -13,7 +13,7 @@ class V20161113145141CreateAddressesTable extends BaseMigration
     {
         $this->schema->table('addresses')
             ->bigId()
-            ->int('app_id')
+            ->uBigInt('app_id')
             ->bigInt('user_id')
             ->string('name', 32)->comment('姓名')
             ->string('mobile', 16)->comment('手机号码')
