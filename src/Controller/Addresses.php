@@ -4,7 +4,7 @@ namespace Miaoxing\Address\Controller;
 
 class Addresses extends \Miaoxing\Plugin\BaseController
 {
-    const SOURCE_WECHAT = 2;
+    public const SOURCE_WECHAT = 2;
 
     public function indexAction($req)
     {
@@ -53,7 +53,6 @@ class Addresses extends \Miaoxing\Plugin\BaseController
             'data' => $req,
             'rules' => [
                 'name' => [
-
                 ],
                 'contact' => [
                     'mobileCn' => true,
@@ -63,16 +62,12 @@ class Addresses extends \Miaoxing\Plugin\BaseController
                     'idCardCn' => true,
                 ],
                 'province' => [
-
                 ],
                 'city' => [
-
                 ],
                 'area' => [
-
                 ],
                 'address' => [
-
                 ],
             ],
             'messages' => [
@@ -103,7 +98,7 @@ class Addresses extends \Miaoxing\Plugin\BaseController
         }
 
         // 设置其他地址未非默认
-        if ($req['defaultAddress'] == 1) {
+        if (1 == $req['defaultAddress']) {
             wei()->address->updateAddress(['defaultAddress' => 0], ['userId' => $this->curUser['id']]);
         }
 

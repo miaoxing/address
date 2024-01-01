@@ -15,7 +15,7 @@ class AddressPlugin extends BasePlugin
         $links[] = [
             'typeId' => 'mall',
             'name' => '地址列表',
-            'url' => 'addresses'
+            'url' => 'addresses',
         ];
     }
 }
