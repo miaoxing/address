@@ -5,11 +5,27 @@ namespace Miaoxing\Address\Service;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
 
+/**
+ * @property string|null $id
+ * @property string $appId
+ * @property string $userId
+ * @property string $name 姓名
+ * @property string $mobile 手机号码
+ * @property string $province 省份
+ * @property string $city 城市
+ * @property string $district 县或区的名称
+ * @property string $street 街道
+ * @property string $detail 详细地址
+ * @property string $postcode 邮政编码
+ * @property string $idCard 身份证
+ * @property bool $isDefault 是否默认地址
+ * @property int $source 来源
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
+ */
 class Address extends BaseModel
 {
     use ModelTrait;
-
-    protected $table = 'address';
 
     /**
      * Repo
